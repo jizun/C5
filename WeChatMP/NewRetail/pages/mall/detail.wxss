@@ -1,0 +1,157 @@
+@import "/lib/layout.wxss";
+
+page {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.GoodsPhoto {
+  width: 100%;
+  background: white;
+}
+
+.GoodsInfo {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+.GoodsTags {
+  height: 1.1em;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -1em;
+  z-index: 999;
+  text-align: right;
+}
+
+.GoodsTag {
+  display: inline;
+  margin-right: 5px;
+}
+
+.GoodsTitle {
+  padding: 0px 10px;
+  word-break: keep-all;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.GoodsPrice {
+  padding: 0px 10px;
+}
+
+.GoodsSpecs {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+.GoodsSpec {
+  margin-bottom: 5px;
+}
+
+.GoodsSpecTitle {
+  display: inline-block;
+}
+
+.GoodsSpecValues {
+  display: inline-block;
+}
+
+.GoodsSpecValue {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-right: 5px;
+  padding: 0px 5px;
+}
+
+.GoodsSpecValueSelected {
+  border: 2px solid rgba(255, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.MenuHeight {
+  color: rgba(0, 0, 0, 0);
+  margin: 5%;
+}
+
+.OrderMenu {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  bottom: 0px;
+  background: goldenrod;
+}
+
+.OrderInfo {
+  width: 60%;
+  height: 100%;
+  display: inline-flex;
+}
+
+.OrderAmount {
+  width: 40%;
+  padding-left: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+
+.OrderQuantity {
+  width: 25%;
+  position: absolute;
+  margin-left: 45%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  background: DarkGoldenrod;
+}
+
+.OrderQuantity input {
+  width: 70%;
+  height: 100%;
+  /*font-size: 1.8em;*/
+  text-align: center;
+}
+
+.btnOrderQty {
+  width: 30%;
+  height: 50%;
+  text-align: center;
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnOrderQtyAdd {
+  top: 0px;
+}
+
+.btnOrderQtyReduce {
+  top: 50%;
+}
+
+.OrderBuy {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /*color: OrangeRed;*/
+  background: Orange;
+}

@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ziri.MDL", "Ziri.MDL\Ziri.MDL.csproj", "{2F295794-DB07-4799-BF6C-F84F23969FE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ziri.DAL", "Ziri.DAL\Ziri.DAL.csproj", "{6C39004F-2596-4F05-A808-CB0172F11AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ziri.BLL", "Ziri.BLL\Ziri.BLL.csproj", "{823ADF52-A221-4EE6-84D1-CFDE960076D1}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Admin", "Admin", "{3EAAA27E-4A92-4426-8BF3-E3A548333B26}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{823adf52-a221-4ee6-84d1-cfde960076d1}|Ziri.BLL.dll;{6C39004F-2596-4F05-A808-CB0172F11AF8}|Ziri.DAL.dll;{2F295794-DB07-4799-BF6C-F84F23969FE3}|Ziri.MDL.dll;{25911370-F06A-4956-8EE3-659A7BA14961}|WxPayAPI.dll;{9C11CAE5-5188-4E71-825B-68FC3135728A}|AopSdk.dll;{EC6DA18D-0532-4E73-BA69-A575A724C8BB}|F2FPayDll.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_10543"
+		Debug.AspNetCompiler.PhysicalPath = "Admin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10543\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_10543"
+		Release.AspNetCompiler.PhysicalPath = "Admin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10543\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "10543"
+		SlnRelativePath = "Admin\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS", "DMS\DMS.csproj", "{131F2B9E-793D-4B85-BF57-5397CD9D1D39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWW", "WWW\WWW.csproj", "{A60A302B-7D86-4EE3-A5C0-84B5A29C6A5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WxPayAPI", "WxPayAPI\WxPayAPI.csproj", "{25911370-F06A-4956-8EE3-659A7BA14961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F2FPayDll", "F2FPayDll\F2FPayDll.csproj", "{EC6DA18D-0532-4E73-BA69-A575A724C8BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AopSdk", "AliPaySDK\AopSdk.csproj", "{9C11CAE5-5188-4E71-825B-68FC3135728A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F295794-DB07-4799-BF6C-F84F23969FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F295794-DB07-4799-BF6C-F84F23969FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F295794-DB07-4799-BF6C-F84F23969FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F295794-DB07-4799-BF6C-F84F23969FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C39004F-2596-4F05-A808-CB0172F11AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C39004F-2596-4F05-A808-CB0172F11AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C39004F-2596-4F05-A808-CB0172F11AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C39004F-2596-4F05-A808-CB0172F11AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823ADF52-A221-4EE6-84D1-CFDE960076D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823ADF52-A221-4EE6-84D1-CFDE960076D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823ADF52-A221-4EE6-84D1-CFDE960076D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823ADF52-A221-4EE6-84D1-CFDE960076D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAAA27E-4A92-4426-8BF3-E3A548333B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAAA27E-4A92-4426-8BF3-E3A548333B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAAA27E-4A92-4426-8BF3-E3A548333B26}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAAA27E-4A92-4426-8BF3-E3A548333B26}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{131F2B9E-793D-4B85-BF57-5397CD9D1D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131F2B9E-793D-4B85-BF57-5397CD9D1D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131F2B9E-793D-4B85-BF57-5397CD9D1D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131F2B9E-793D-4B85-BF57-5397CD9D1D39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A60A302B-7D86-4EE3-A5C0-84B5A29C6A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A60A302B-7D86-4EE3-A5C0-84B5A29C6A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A60A302B-7D86-4EE3-A5C0-84B5A29C6A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A60A302B-7D86-4EE3-A5C0-84B5A29C6A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25911370-F06A-4956-8EE3-659A7BA14961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25911370-F06A-4956-8EE3-659A7BA14961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25911370-F06A-4956-8EE3-659A7BA14961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25911370-F06A-4956-8EE3-659A7BA14961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6DA18D-0532-4E73-BA69-A575A724C8BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6DA18D-0532-4E73-BA69-A575A724C8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6DA18D-0532-4E73-BA69-A575A724C8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6DA18D-0532-4E73-BA69-A575A724C8BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C11CAE5-5188-4E71-825B-68FC3135728A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C2B48B4-C199-430E-A6DE-7D80914B5F9A}
+	EndGlobalSection
+EndGlobal

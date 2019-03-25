@@ -1,0 +1,14 @@
+<view class="col_box tab_category">
+  <view class="col_5 tab_button tab_selected">
+    <text>按品牌</text>
+  </view>
+  <view class="col_5 tab_button">
+    <navigator url="/pages/mall/kind">按品类</navigator>
+  </view>
+</view>
+
+<view wx:for="{{BrandList}}" wx:key="{{item.ID}}">
+  <navigator url="/pages/mall/goods?brandid={{item.ID}}">
+    <image class="BrandBrand" mode="widthFix" src="https://www.jixinxj.com/doc/upload/{{item.BrandFileGUID}}{{item.BrandFileExtName}}"></image>
+  </navigator>
+</view>

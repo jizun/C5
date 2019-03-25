@@ -1,0 +1,15 @@
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\Ziri.MDL.dll
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\Ziri.MDL.pdb
+U:\WORK.IT.WEB\C5\Ziri.MDL\obj\Release\Ziri.MDL.dll
+U:\WORK.IT.WEB\C5\Ziri.MDL\obj\Release\Ziri.MDL.pdb
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\Ziri.MDL.dll.config
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\EntityFramework.dll
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\EntityFramework.SqlServer.dll
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\System.Net.Http.dll
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\EntityFramework.xml
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\EntityFramework.SqlServer.xml
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\System.Net.Http.xml
+U:\WORK.IT.WEB\C5\Ziri.MDL\bin\Release\zh-Hans\System.Net.Http.resources.dll
+U:\WORK.IT.WEB\C5\Ziri.MDL\obj\Release\Ziri.MDL.csprojAssemblyReference.cache
+U:\WORK.IT.WEB\C5\Ziri.MDL\obj\Release\Ziri.MDL.csproj.CoreCompileInputs.cache
+U:\WORK.IT.WEB\C5\Ziri.MDL\obj\Release\Ziri.MDL.csproj.CopyComplete

@@ -1,0 +1,105 @@
+@import "/lib/layout.wxss";
+
+page {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.ListTabs {
+  margin-top: 0px;
+  background: white;
+}
+
+.TabMenu {
+  width: 60%;
+  margin: 0px auto;
+  padding: 0px 10px 20rpx 10rpx;
+}
+
+.TabActive {
+  border-bottom: 5rpx solid Tomato;
+}
+
+.StateCount {
+  margin: 0px 0px -1.5em 95%;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  font-size: 0.5em;
+  color: white;
+  background: red;
+  border-radius: 50%;
+}
+
+.ListNothing {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.order_info {
+  margin: 5rpx 0px 10rpx 0px;
+  padding: 20rpx;
+  background: white;
+}
+
+.order_title {
+  margin: 0px 10rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+}
+
+.order_state {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.GoodsPhotos {
+  width: 100rpx;
+  height: 100rpx;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.GoodsPhoto {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.GoodsTitle {
+  margin-left: 20rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.GoodsCount {
+  line-height: 100rpx;
+  position: absolute;
+  right: 10px;
+}
+
+.order_action {
+  text-align: right;
+}
+
+.order_action button {
+  display: inline-block;
+  line-height: 1em;
+  font-size: 0.8em;
+  margin-right: 10rpx;
+  padding: 5rpx;
+  color: #fff;
+  background-color: #1aad19;
+}
+
+.pager {
+  padding: 20rpx;
+  text-align: center;
+}

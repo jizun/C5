@@ -1,0 +1,88 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+
+<view wx:if="{{OrderInfo.BillNO}}">
+  <view class="OrderInfoTitle">订单信息</view>
+  <view class="ContactInfo">
+    <view class="col_box">
+      <view class="col_3">订单号：</view>
+      <view class="col_7">{{OrderInfo.BillNO}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="OrderInfoTitle">商品信息</view>
+<view class="OrderInfo col_box">
+  <view class="col_3">
+    <scroll-view class="GoodsPhotos nowrap" scroll-x="true">
+      <image class="GoodsPhoto" bindtap="imgBrowse" wx:for="{{GoodsDetail.Photos}}" wx:key="{{index}}" mode="widthFix" src="{{item}}"></image>
+    </scroll-view>
+  </view>
+  <view class="col_7 OrderRight">
+    <view class="GoodsTitle">品名：{{GoodsDetail.Title}}</view>
+    <view class="OrderSpec" wx:if="{{OrderInfo.Counter.SpecValues}}">规格：{{OrderInfo.Counter.SpecValues}}</view>
+    <view class="OrderQuantity">数量：{{OrderInfo.Quantity}}</view>
+    <view class="OrderPrice">单价：{{OrderInfo.Counter.Price}}</view>
+    <view class="OrderAmount">金额：¥{{filters.toFixed(OrderInfo.Amount,2)}}</view>
+  </view>
+</view>
+
+<view class="OrderInfoTitle">收货信息</view>
+<view class="ContactInfo">
+  <view class="col_box">
+    <view class="col_3">联系人：</view>
+    <input class="col_7" type="text" value="{{ReceiveInfo.Consignee}}" bindchange="onInputChange" data-prop="Consignee" />
+  </view>
+  <view class="col_box">
+    <view class="col_3">联系电话：</view>
+    <input class="col_7" type="text" value="{{ReceiveInfo.Phone}}" bindchange="onInputChange" data-prop="Phone" />
+  </view>
+  <view class="col_box">
+    <view class="col_3">收货方式：</view>
+    <view class="ReceiveType {{ReceiveInfo.ReceiveType=='Stores'?'ReceiveTypeSelected':''}}" bindtap='onReceiveTypeChange' data-receive_type="Stores">自提</view>
+    <view class="ReceiveType {{ReceiveInfo.ReceiveType=='Logistics'?'ReceiveTypeSelected':''}}" bindtap='onReceiveTypeChange' data-receive_type="Logistics">派送</view>
+  </view>
+
+  <view wx:if="{{ReceiveInfo.ReceiveType=='Stores'}}">
+    <view class="col_box">
+      <view class="col_3">选择门店：</view>
+    </view>
+    <picker-view class="StoreList" bindchange="onStoreChange" data-prop="StoreID">
+      <picker-view-column>
+        <view class="StoreItem" wx:for="{{StoreList}}" wx:key="{{index}}">
+          <image class="StoreLogo" src="{{item.LogoUrl}}"></image>
+          {{item.Title}}，{{filters.toFixed(item.DistanceKM,2)}}km，
+          <navigator url="/pages/store/detail?storeid={{index}}" style="display:inline;">介绍</navigator>
+        </view>
+      </picker-view-column>
+    </picker-view>
+    <view class="ReceiveNotice">门店专员在收到订单后将与您联系，确认订单信息与提货时间，请保持电话畅通哦！</view>
+  </view>
+  <view wx:else>
+    <view class="col_box">
+      <view class="col_3">收货地址：</view>
+    </view>
+    <textarea class="ReceiveAddress" value="{{ReceiveInfo.Address}}" bindblur="onInputChange" data-prop="Address" />
+    <map class="AddressMap" wx:if="{{AddressMarkers}}" markers="{{AddressMarkers}}" longitude="{{AddressLocation.lng}}" latitude="{{AddressLocation.lat}}" scale='16' show-location>
+    </map>
+    <view class="ReceiveNotice">我们将为你安排物流快递派送，您随时可以登录会员中心，查询派送进度哦！</view>
+  </view>
+
+  <view class="col_box">
+    <view class="col_3">订单备注：</view>
+  </view>
+  <textarea class="ReceiveRemark" value="{{OrderInfo.Remark}}" bindblur="onInputChange" data-prop="Remark" />
+
+</view>
+
+<view class="MenuHeight">MenuClear</view>
+<view class="OrderMenu" wx:if="{{OrderInfo.BillID==null || OrderInfo.BillID==0}}">
+  <view class="OrderButton btnR2" bindtap="onOrderSubmit" data-paytype="F2F" wx:if="{{ReceiveInfo.ReceiveType=='Stores'}}">到店支付</view>
+  <view class="OrderButton btnR1" bindtap="onOrderSubmit" data-paytype="WxPay">微信支付</view>
+</view>
+<view class="OrderMenu" wx:else>
+
+  <view class="OrderButton btnR3" wx:if="{{Paid==false && PayInfo!=null}}" bindtap="onWxPay">微信支付</view>
+    <view class="OrderButton btnR2" bindtap="onOrderSubmit">保存修改</view>
+  <view class="OrderButton btnR1" bindtap="onOrderList" data-billid="{{OrderInfo.BillID}}">我的订单</view>
+
+</view>

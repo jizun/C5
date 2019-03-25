@@ -1,0 +1,72 @@
+@import "/lib/layout.wxss";
+
+.GoodsItem {
+  width: 50%;
+  display: inline-block;
+}
+
+.GoodsInfo {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.GoodsPhotos {
+  margin: 0px auto;
+}
+
+.GoodsPhoto {
+  display: inline;
+}
+
+.GoodsPhoto image {
+  width: 100%;
+}
+
+.GoodsTags {
+  height: 1.1em;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -1em;
+  z-index: 999;
+  text-align: right;
+}
+
+.GoodsTag {
+  display: inline;
+  margin-right: 5px;
+}
+
+.GoodsTitle {
+  word-break: keep-all;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.GoodsPrice {
+  word-break: keep-all;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.GoodsMenu {
+  height: 30px;
+  text-align: right;
+  margin: 0px -5px -5px 0px;
+}
+
+.btnBuy {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  right: 0px;
+  width: 40%;
+  text-align: center;
+  padding: 0px 5px;
+  border-radius: 0px 0px 5px 0px;
+  /*color: OrangeRed;*/
+  background: Orange;
+}

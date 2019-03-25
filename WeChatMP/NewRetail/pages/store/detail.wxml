@@ -1,0 +1,32 @@
+<view wx:if="SelectedStoreID">
+
+  <view class="StoreCard">
+    <view class="CardBody col_box">
+      <view class="CardLeft col_7">
+        <view class="StoreTitle">{{StoreList[SelectedStoreID].Title}}</view>
+        <view class="StoreAddress">{{StoreList[SelectedStoreID].Address}}</view>
+        <view class="StorePhone">{{StoreList[SelectedStoreID].Phone}}</view>
+        <view class="StoreEMail">{{StoreList[SelectedStoreID].EMail}}</view>
+      </view>
+      <view class="CardRight col_3">
+        <view class="StoreLogo">
+          <image src="{{StoreList[SelectedStoreID].LogoUrl}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="CardFoot">
+      <text bindtap='onPhoneCall' data-phone="{{StoreList[SelectedStoreID].Phone}}">致电咨询</text>
+      <navigator class="btnNav" url="/pages/store/map?endlat={{StoreList[SelectedStoreID].Latitude}}&endlng={{StoreList[SelectedStoreID].Longitude}}&title={{StoreList[SelectedStoreID].Title}}">
+        <text>导航前往</text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="StoreDesc">
+    <scroll-view class="nowrap" scroll-x="true">
+      <image class="store_photo" bindtap="imgBrowse" data-src="{{item}}" wx:key="{{index}}" wx:for="{{StoreList[SelectedStoreID].Photos}}" src="{{item}}"></image>
+    </scroll-view>
+    <rich-text nodes="{{StoreList[SelectedStoreID].Description}}"></rich-text>
+  </view>
+
+</view>

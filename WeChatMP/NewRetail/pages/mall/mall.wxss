@@ -1,0 +1,10 @@
+@import "/lib/layout.wxss";
+
+.tab_category {
+  margin-bottom: 10px;
+}
+
+.BrandBrand {
+  width: 100%;
+
+}

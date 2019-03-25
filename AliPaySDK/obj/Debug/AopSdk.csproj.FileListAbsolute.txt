@@ -1,0 +1,23 @@
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet_RSA1\Projects\alipay-sdk-NET20161213174056\bin\Debug\AopSdk.dll
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet_RSA1\Projects\alipay-sdk-NET20161213174056\bin\Debug\AopSdk.pdb
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet_RSA1\Projects\alipay-sdk-NET20161213174056\obj\Debug\AopSdk.dll
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet_RSA1\Projects\alipay-sdk-NET20161213174056\obj\Debug\AopSdk.pdb
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\bin\Debug\AopSdk.dll
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\bin\Debug\AopSdk.pdb
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\obj\Debug\AopSdk.dll
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\obj\Debug\AopSdk.pdb
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet (4)\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\bin\Debug\AopSdk.dll
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet (4)\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\bin\Debug\AopSdk.pdb
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet (4)\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\obj\Debug\AopSdk.dll
+C:\Users\jinjie.zhang\Desktop\F2FPay_Demo_DotNet (4)\F2FPay_Demo_DotNet\Projects\alipay-sdk-NET20161213174056\obj\Debug\AopSdk.pdb
+E:\jizun\0.学习\当前\C5\AliPaySDK\bin\Debug\AopSdk.dll
+E:\jizun\0.学习\当前\C5\AliPaySDK\bin\Debug\AopSdk.pdb
+E:\jizun\0.学习\当前\C5\AliPaySDK\obj\Debug\AopSdk.csprojAssemblyReference.cache
+E:\jizun\0.学习\当前\C5\AliPaySDK\obj\Debug\AopSdk.csproj.CoreCompileInputs.cache
+E:\jizun\0.学习\当前\C5\AliPaySDK\obj\Debug\AopSdk.dll
+E:\jizun\0.学习\当前\C5\AliPaySDK\obj\Debug\AopSdk.pdb
+U:\WORK.IT.WEB\C5\AliPaySDK\bin\Debug\AopSdk.dll
+U:\WORK.IT.WEB\C5\AliPaySDK\bin\Debug\AopSdk.pdb
+U:\WORK.IT.WEB\C5\AliPaySDK\obj\Debug\AopSdk.csproj.CoreCompileInputs.cache
+U:\WORK.IT.WEB\C5\AliPaySDK\obj\Debug\AopSdk.dll
+U:\WORK.IT.WEB\C5\AliPaySDK\obj\Debug\AopSdk.pdb

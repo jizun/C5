@@ -1,0 +1,38 @@
+@import "/lib/table.wxss";
+
+.StoreDesc {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.StoreDescTitle {
+  width: 100%;
+  background: #36f;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding-left: 10px;
+}
+
+.StoreTitle {
+  white-space: nowrap;
+  display: flex;
+}
+
+.StoreLogo {
+  width: 20px;
+  height: 20px;
+  margin: 0px 5px;
+}
+
+.btnMap {
+  margin-left: 10px;
+}

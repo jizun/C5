@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{823ADF52-A221-4EE6-84D1-CFDE960076D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ziri.BLL</RootNamespace>
+    <AssemblyName>Ziri.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DocManager.cs" />
+    <Compile Include="ITEM\Brand.cs" />
+    <Compile Include="ITEM\Goods.cs" />
+    <Compile Include="ITEM\Kind.cs" />
+    <Compile Include="ITEM\Spec.cs" />
+    <Compile Include="LIST.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="LogManager.cs" />
+    <Compile Include="Notifications.cs" />
+    <Compile Include="OMS\SalesOrder.cs" />
+    <Compile Include="Pay\AliPay.cs" />
+    <Compile Include="Pay\AliPayAPI.cs" />
+    <Compile Include="Pay\Pay.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QQ\WeChat.cs" />
+    <Compile Include="QQ\WS.cs" />
+    <Compile Include="RMS\Store.cs" />
+    <Compile Include="Slogan.cs" />
+    <Compile Include="SYS\AUTH.cs" />
+    <Compile Include="SYS\DOC.cs" />
+    <Compile Include="SYS\Menu.cs" />
+    <Compile Include="SYS\Module.cs" />
+    <Compile Include="SYS\Role.cs" />
+    <Compile Include="SYS\User.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Utils\Map.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AliPaySDK\AopSdk.csproj">
+      <Project>{9c11cae5-5188-4e71-825b-68fc3135728a}</Project>
+      <Name>AopSdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\F2FPayDll\F2FPayDll.csproj">
+      <Project>{ec6da18d-0532-4e73-ba69-a575a724c8bb}</Project>
+      <Name>F2FPayDll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WxPayAPI\WxPayAPI.csproj">
+      <Project>{25911370-F06A-4956-8EE3-659A7BA14961}</Project>
+      <Name>WxPayAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ziri.DAL\Ziri.DAL.csproj">
+      <Project>{6c39004f-2596-4f05-a808-cb0172f11af8}</Project>
+      <Name>Ziri.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ziri.MDL\Ziri.MDL.csproj">
+      <Project>{2f295794-db07-4799-bf6c-f84f23969fe3}</Project>
+      <Name>Ziri.MDL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Business Logic Layer.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

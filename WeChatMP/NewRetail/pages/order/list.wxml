@@ -1,0 +1,43 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+
+<view class="col_box ListTabs">
+  <view class="col_25 ListTab" wx:for="{{Tabs}}" wx:key="{{index}}">
+    <view class="TabMenu {{index == TabIndex ? 'TabActive' : ''}}" bindtap="onTab" data-tabindex="{{index}}">
+      <view class="StateCount">{{StateCount[index]}}</view>
+      {{item}}
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{OrderList}}">
+  <view class="order_info" wx:for="{{OrderList}}" wx:for-item="so" wx:key="{{index}}">
+    <view class="col_box nowrap order_title">
+      <view class="col_7 order_no">单号{{so.BillNO}}</view>
+      <view class="col_3 order_state">已{{so.StateTitle}}</view>
+    </view>
+    <view class="col_box order_item" wx:for="{{so.SOItems}}" wx:for-item="so_goods" wx:key="{{index}}">
+      <scroll-view class="GoodsPhotos nowrap" scroll-x="true">
+        <image class="GoodsPhoto" wx:for="{{so_goods.GoodsPhotos}}" wx:key="{{index}}" src="{{item}}" />
+      </scroll-view>
+      <view class="GoodsTitle">{{so_goods.GoodsTitle}}</view>
+      <view class="GoodsCount">¥{{so_goods.Price}} x {{so_goods.Quantity}}</view>
+    </view>
+    <view class="order_action">
+      <button wx:if="{{(so.StateTitle == '创建' || so.StateTitle == '确认') && so.PayTypeTitle == '微信支付'}}" bindtap="onPay" data-soid="{{so.ID}}" data-sobillno="{{so.BillNO}}" data-paytypetitle="{{so.PayTypeTitle}}">{{so.PayTypeTitle}}</button>
+      <button wx:if="{{(so.StateTitle == '创建' || so.StateTitle == '确认') && so.PayTypeTitle == '到店支付'}}" bindtap="onPay" data-soid="{{so.ID}}" data-sobillno="{{so.BillNO}}" data-paytypetitle="{{so.PayTypeTitle}}">提货码</button>
+      <button wx:if="{{so.StateTitle == '发货'}}" bindtap="onTaken" data-soid="{{so.ID}}">确认收货</button>
+      <button wx:if="{{so.StateTitle != '申请取消' && so.StateTitle != '退货' && so.StateTitle != '取消'}}" bindtap="onCancel" data-soid="{{so.ID}}">取消订单</button>
+      <button wx:if="{{so.StateTitle == '收货'}}">申请退货</button>
+    </view>
+  </view>
+  <view class="pager">
+    共{{SOPager.ItemCount}}项，每页{{SOPager.PageSize}}项， 共{{SOPager.PageCount}}页，第{{SOPager.PageIndex}}页
+    <view class="col_box pager_btn">
+      <button bindtap="onPagerChange" data-index="1">首页</button>
+      <button bindtap="onPagerChange" data-index="{{SOPager.PageIndex - 1}}">上一页</button>
+      <button bindtap="onPagerChange" data-index="{{SOPager.PageIndex + 1}}">下一页</button>
+      <button bindtap="onPagerChange" data-index="{{SOPager.PageCount}}">尾页</button>
+    </view>
+  </view>
+</view>
+<view wx:else class="ListNothing">没有订单呢，快去线上商城逛逛吧！</view>

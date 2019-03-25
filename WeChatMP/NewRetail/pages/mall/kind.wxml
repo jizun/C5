@@ -1,0 +1,10 @@
+<view class="col_box tab_category">
+  <view class="col_5 tab_button">
+    <navigator url="/pages/mall/mall" open-type="switchTab">按品牌</navigator>
+  </view>
+  <view class="col_5 tab_button tab_selected">
+    <text>按品类</text>
+  </view>
+</view>
+
+<view></view>

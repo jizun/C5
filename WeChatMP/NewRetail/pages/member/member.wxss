@@ -1,0 +1,61 @@
+@import "/lib/layout.wxss";
+
+page {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.user_info {
+  padding: 30rpx;
+  background: white;
+}
+
+.user_avatar {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.user_avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+
+.user_profile {
+  height: 180rpx;
+  padding-left: 20rpx;
+  text-align: left;
+}
+
+.profile_item {
+  line-height: 90rpx;
+}
+
+.user_name {
+  font-weight: bold;
+}
+
+.btnLogin {
+  margin: 50rpx 0px 0px 30rpx;
+}
+
+.member_info {
+  margin-top: 0px;
+  border-top: 1rpx dotted rgba(0, 0, 0, 0.1);
+  padding: 30rpx;
+  background: white;
+}
+
+.menu_item {
+  margin: 10px 0px;
+  padding: 30rpx;
+  background: white;
+}
+
+.menu_icon {
+  width: 50rpx;
+  height: 50jpx;
+  border-radius: 25rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.1);
+}

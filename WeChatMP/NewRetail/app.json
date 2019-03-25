@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mall/mall",
+    "pages/mall/kind",
+    "pages/mall/goods",
+    "pages/mall/detail",
+    "pages/store/store",
+    "pages/store/detail",
+    "pages/store/map",
+    "pages/member/member",
+    "pages/order/order",
+    "pages/order/list",
+    "pages/order/qrcode"
+  ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "media/images/index1.png",
+        "selectedIconPath": "media/images/index2.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "线上商城",
+        "iconPath": "media/images/mall1.png",
+        "selectedIconPath": "media/images/mall2.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "线下门店",
+        "iconPath": "media/images/store1.png",
+        "selectedIconPath": "media/images/store2.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "会员中心",
+        "iconPath": "media/images/member1.png",
+        "selectedIconPath": "media/images/member2.png"
+      }
+    ]
+  },
+  "plugins": {
+    "myPlugin": {
+      "version": "1.0.6",
+      "provider": "wx5bc2ac602a747594"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "华工新零售",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于导航到最近的门店"
+    }
+  }
+}

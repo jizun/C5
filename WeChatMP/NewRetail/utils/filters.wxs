@@ -1,0 +1,24 @@
+var filters = {
+  toFixed: function(value, count) {
+    return value.toFixed(count);
+  },
+  //进一法
+  toCeil: function(value, num) {
+    return Math.ceil(value * Math.pow(10, num)) / Math.pow(10, num);
+  },
+  //四舍五入法
+  toRound: function(value, num) {
+    return Math.round(value * Math.pow(10, num)) / Math.pow(10, num);
+  },
+  //舍去法
+  toFloor: function(value, num) {
+    return Math.floor(value * Math.pow(10, num)) / Math.pow(10, num);
+  }
+}
+
+module.exports = {
+  toFixed: filters.toFixed,
+  toCeil: filters.toCeil,
+  toRound: filters.toRound,
+  toFloor: filters.toFloor,
+}

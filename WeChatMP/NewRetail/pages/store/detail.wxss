@@ -1,0 +1,72 @@
+@import "/lib/layout.wxss";
+
+.StoreCard {
+  height: 160px;
+  width: 90%;
+  margin: 5px auto;
+  border: rgba(0, 0, 0, 0.1) 1px solid;
+  border-radius: 10px;
+  background-image: url('https://www.jixinxj.com/media/misc/bg_2.jpg');
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.CardBody {
+  margin: 20px 0px 0px 20px;
+}
+
+.CardLeft {
+  text-align: left;
+}
+
+.StoreTitle {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.StoreAddress {
+  margin-top: 5px;
+  font-size: 0.7em;
+}
+
+.StorePhone {
+  margin-top: 20px;
+  font-size: 0.7em;
+}
+
+.StoreEMail {
+  font-size: 0.7em;
+}
+
+.StoreLogo {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto 5px auto;
+}
+
+.StoreLogo image {
+  width: 100%;
+  height: 100%;
+}
+
+.store_photo {
+  max-width: 110px;
+  max-height: 70px;
+  margin-right: 5px;
+}
+
+.CardFoot {
+  text-align: right;
+  font-size: 0.8em;
+  padding-right: 20px;
+}
+
+.btnNav {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.StoreDesc {
+  padding: 10px;
+}

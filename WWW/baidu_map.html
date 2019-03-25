@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+    <title>百度地图</title>
+</head>
+<body style="margin:0px;">
+    <div id="dituContent" style="width:100%;height:100%;">正在加载中，请稍候……</div>
+    <script src="https://api.map.baidu.com/api?key=&v=1.1&services=true&s=1"></script>
+    <script>
+        var myPoint = new BMap.Point(113.960453, 22.913197);
+        var myLabel = '<b>东莞纪馨生物科技有限公司</b><br>' + '<span><strong>地址：</strong>东莞大朗镇新马莲村云莲七街10号D栋</span><br>'
+            + '<span><strong>电话：</strong>159 2165 6016</span><br>';
+        var map = new BMap.Map('dituContent');
+        map.centerAndZoom(myPoint, 12);
+        map.addControl(new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE }));
+        map.addControl(new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 }));
+        map.addControl(new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT }));
+        map.enableScrollWheelZoom();
+        var marker = new BMap.Marker(myPoint);
+        var infoWindow = new BMap.InfoWindow(myLabel, { width: 200, height: 85, });
+        map.addOverlay(marker); marker.openInfoWindow(infoWindow);
+        marker.addEventListener('click', function () { marker.openInfoWindow(infoWindow); });
+    </script>
+</body>
+</html>

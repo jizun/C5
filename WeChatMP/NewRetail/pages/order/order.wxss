@@ -1,0 +1,142 @@
+@import "/lib/layout.wxss";
+
+page {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.OrderInfoTitle {
+  margin: 5px 0px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.OrderInfo {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
+  text-align: left;
+}
+
+.GoodsPhotos {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.GoodsPhoto {
+  width: 100%;
+}
+
+.OrderRight {
+  padding-left: 10px;
+}
+
+.ContactInfo {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
+}
+
+.col_3 {
+  text-align: right;
+}
+
+.ContactInfo input {
+  text-align: left;
+  width: 70%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.ReceiveType {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-right: 5px;
+  padding: 0px 5px;
+}
+
+.ReceiveTypeSelected {
+  border: 2px solid rgba(255, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.StoreList {
+  margin: 10px 0px;
+  padding: 0px 0px 20px 0px;
+  height: 4em;
+  border: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+.StoreItem {
+  height: 1em;
+}
+
+.StoreLogo {
+  width: 1em;
+  height: 1em;
+}
+
+.ReceiveAddress {
+  margin: 10px 0px;
+  padding: 5px;
+  height: 2em;
+  border: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+.AddressMap {
+  width: 100%;
+  height: 100px;
+}
+
+.ReceiveRemark {
+  margin: 10px 0px;
+  padding: 5px;
+  height: 2em;
+  border: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+.ReceiveNotice {
+  margin-top: 1em;
+  padding: 10px;
+  border: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+.MenuHeight {
+  color: rgba(0, 0, 0, 0);
+  margin: 5%;
+}
+
+.OrderMenu {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  bottom: 0px;
+  background: goldenrod;
+  z-index: 999;
+}
+
+.OrderButton {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /*color: OrangeRed;*/
+  background: Orange;
+}
+
+.btnR1 {
+  top: 0px;
+  right: 0px;
+}
+
+.btnR2 {
+  top: 0px;
+  right: 31%;
+}
+
+.btnR3 {
+  top: 0px;
+  right: 62%;
+}
+

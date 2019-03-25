@@ -1,0 +1,17 @@
+<view class="GoodsItem" wx:for="{{GoodsList}}" wx:for-index="father_index" wx:for-item="father_item" wx:key="{{index}}">
+  <view class="GoodsInfo">
+    <view class="GoodsTags">
+      <view class="GoodsTag" wx:for="{{father_item.Tags}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <scroll-view class="GoodsPhotos nowrap" scroll-x="true">
+      <view class="GoodsPhoto" wx:for="{{father_item.Photos}}" wx:for-index="son_index" wx:for-item="son_item" wx:key="{{index}}">
+        <image bindtap="imgBrowse" data-goodsindex='{{father_index}}' data-src="{{son_item}}" wx:key="{{index}}" src="{{son_item}}" mode="widthFix"></image>
+      </view>
+    </scroll-view>
+    <view class="GoodsTitle">{{father_item.Title}}</view>
+    <view class="GoodsPrice">{{father_item.Price}}</view>
+    <view class="GoodsMenu">
+      <navigator class="btnBuy" url="/pages/mall/detail?goodsid={{father_item.ID}}">购买</navigator>
+    </view>
+  </view>
+</view>

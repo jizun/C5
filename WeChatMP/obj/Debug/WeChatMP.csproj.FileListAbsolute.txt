@@ -1,0 +1,7 @@
+U:\WORK.IT.WEB\C5\WeChatMP\bin\WeChatMP.dll.config
+U:\WORK.IT.WEB\C5\WeChatMP\bin\WeChatMP.dll
+U:\WORK.IT.WEB\C5\WeChatMP\bin\WeChatMP.pdb
+U:\WORK.IT.WEB\C5\WeChatMP\obj\Debug\WeChatMP.csprojAssemblyReference.cache
+U:\WORK.IT.WEB\C5\WeChatMP\obj\Debug\WeChatMP.csproj.CoreCompileInputs.cache
+U:\WORK.IT.WEB\C5\WeChatMP\obj\Debug\WeChatMP.dll
+U:\WORK.IT.WEB\C5\WeChatMP\obj\Debug\WeChatMP.pdb

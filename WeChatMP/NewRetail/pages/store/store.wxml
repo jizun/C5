@@ -1,0 +1,28 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+
+<view class="table" wx:if="{{StoreList}}">
+  <view class="tr bg-w">
+    <view class="th">店名</view>
+    <view class="th">距离 km</view>
+    <view class="th">导航</view>
+  </view>
+  <block wx:for="{{StoreList}}" wx:key="{{ID}}">
+    <navigator url="/pages/store/detail?storeid={{index}}" style="display:inline;">
+      <view class="tr {{index % 2 == 0 ? 'bg-g' : ''}}">
+        <view class="td StoreTitle">
+          <image class="StoreLogo" src="{{item.LogoUrl}}"></image>
+          {{item.Title}}
+        </view>
+        <view class="td">{{filters.toFixed(item.DistanceKM,2)}}</view>
+        <view class="td">
+          <navigator class="btnMap" url="/pages/store/map?endlat={{item.Latitude}}&endlng={{item.Longitude}}&title={{item.Title}}" style="display:inline;">
+            导航前往
+          </navigator>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>
+<block wx:else>
+  <button bindtap='getStoreList' class="btn-confirm button-on-view">获取门店列表</button>
+</block>

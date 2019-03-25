@@ -1,0 +1,38 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+
+<view wx:if="{{GoodsDetail}}">
+  <scroll-view class="GoodsPhotos nowrap" scroll-x="true">
+    <image class="GoodsPhoto" bindtap="imgBrowse" wx:for="{{GoodsDetail.Photos}}" wx:key="{{index}}" mode="widthFix" src="{{item}}"></image>
+  </scroll-view>
+  <view class="GoodsInfo">
+    <view class="GoodsTags">
+      <view class="GoodsTag" wx:for="{{GoodsDetail.Tags}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <view class="GoodsTitle">{{GoodsDetail.Title}}</view>
+    <view class="GoodsPrice">¥ {{GoodsDetail.Price}}</view>
+  </view>
+
+  <view class="GoodsSpecs" wx:if="{{OrderInfo.SpecSelected.length>0}}">
+    <view class="GoodsSpec" wx:for="{{OrderInfo.SpecSelected}}" wx:key="index">
+      <view class="GoodsSpecTitle">{{item.spec.Title}}：</view>
+      <view class="GoodsSpecValues">
+        <view class="GoodsSpecValue {{item.valueid==value.ID?'GoodsSpecValueSelected':''}}" wx:for="{{item.values}}" wx:for-item="value" wx:key="index" bindtap="onSpecSelected" data-specid="{{item.spec.ID}}" data-specvalueid="{{value.ID}}" wx:if="{{value.SpecID == item.spec.ID}}">{{value.Value}}</view>
+      </view>
+    </view>
+  </view>
+
+  <rich-text class="GoodsDescription" nodes="{{GoodsDetail.Description}}"></rich-text>
+</view>
+
+<view class="MenuHeight">MenuClear</view>
+<view class="OrderMenu">
+  <view class="OrderInfo">
+    <view class="OrderAmount">¥{{filters.toFixed(OrderInfo.Amount,2)}}</view>
+    <view class="OrderQuantity">
+      <input name="inpOrderQty" value="{{OrderInfo.Quantity}}" bindchange="onOrderQtyChange" data-action="Input" />
+      <view class="btnOrderQty btnOrderQtyAdd" bindtap="onOrderQtyChange" data-action="Add">+</view>
+      <view class="btnOrderQty btnOrderQtyReduce" bindtap="onOrderQtyChange" data-action="Reduce">-</view>
+    </view>
+  </view>
+  <view class="OrderBuy" bindtap="onBuy">确认订单</view>
+</view>

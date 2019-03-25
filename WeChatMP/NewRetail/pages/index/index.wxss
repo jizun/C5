@@ -1,0 +1,143 @@
+@import "/lib/layout.wxss";
+
+page {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.banner {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.banner image {
+  width: 100%;
+}
+
+.page_head {
+  margin-top: 5px;
+  padding: 10px;
+  height: 120px;
+  background: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.page_head_avatar {
+  margin-top: 10px;
+}
+
+.head_avatar_img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.store_near {
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 1);
+}
+
+.store_near_text {
+  padding: 10px;
+}
+
+.store_near_map {
+  width: 100%;
+  height: 150px;
+}
+
+.btnNav {
+  margin-top: 5px;
+}
+
+.store_photos {
+  padding-bottom: 3px;
+}
+
+.store_photo {
+  max-width: 100px;
+  max-height: 60px;
+  margin-right: 5px;
+}
+
+.GoodsTitle {
+  margin-top: 10rpx;
+  padding: 20rpx;
+  font-weight: bold;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.GoodsNew {
+  background: white;
+}
+
+.GoodsItem {
+  width: 50%;
+  display: inline-block;
+}
+
+.GoodsInfo {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.GoodsPhotos {
+  margin: 0px auto;
+}
+
+.GoodsPhoto {
+  display: inline;
+}
+
+.GoodsPhoto image {
+  width: 100%;
+}
+
+.GoodsTags {
+  height: 1.1em;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -1em;
+  z-index: 999;
+  text-align: right;
+}
+
+.GoodsTag {
+  display: inline;
+  margin-right: 5px;
+}
+
+.GoodsTitle {
+  word-break: keep-all;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.GoodsPrice {
+  word-break: keep-all;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.GoodsMenu {
+  height: 30px;
+  text-align: right;
+  margin: 0px -5px -5px 0px;
+}
+
+.btnBuy {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  right: 0px;
+  width: 40%;
+  text-align: center;
+  padding: 0px 5px;
+  border-radius: 0px 0px 5px 0px;
+  /*color: OrangeRed;*/
+  background: Orange;
+}

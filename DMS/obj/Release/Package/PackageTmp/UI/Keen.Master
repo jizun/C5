@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Keen.master.cs" Inherits="DMS.UI.Keen" %>
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="description" content="DMS - ZIRI">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="/UI/keenthemes.com/keen/preview/default/assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/UI/keenthemes.com/keen/preview/default/assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles -->
+
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="/UI/keenthemes.com/keen/preview/default/assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="/UI/keenthemes.com/keen/preview/default/assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="/UI/keenthemes.com/keen/preview/default/assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+    <link href="/UI/keenthemes.com/keen/preview/default/assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+    <!--end::Layout Skins -->
+
+    <asp:ContentPlaceHolder ID="PageHeadPlaceHolder" runat="server" />
+    <style type="text/css">
+        .page-content {
+            height: 100%;
+            overflow: auto;
+        }
+
+        .ListFilterMark {
+            padding: 0px 2px;
+            color: white;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form" runat="server">
+        <!-- begin:: Content -->
+        <div class="k-grid__item k-grid__item--fluid k-grid k-grid--hor page-content">
+            <asp:ContentPlaceHolder ID="PageContentPlaceHolder" runat="server" />
+        </div>
+        <!-- end:: Content -->
+
+        <!-- begin:: Footer -->
+        <div class="k-footer k-grid__item k-grid k-grid--desktop k-grid--ver-desktop">
+            <div class="k-footer__copyright">
+                2019&nbsp;&copy;&nbsp;<a class="k-link">ZIRI DMS</a>
+            </div>
+            <div class="k-footer__menu">
+                <a class="k-footer__menu-link k-link">About</a>
+                <a class="k-footer__menu-link k-link">Team</a>
+                <a class="k-footer__menu-link k-link">Contact</a>
+            </div>
+        </div>
+        <!-- end:: Footer -->
+
+        <!-- begin:: Scrolltop -->
+        <div id="k_scrolltop" class="k-scrolltop">
+            <i class="la la-arrow-up"></i>
+        </div>
+        <!-- end:: Scrolltop -->
+
+        <!-- begin::Global Config(global config for global JS sciprts) -->
+        <script>
+            var KAppOptions = {
+                "colors": {
+                    "state": {
+                        "brand": "#5d78ff",
+                        "metal": "#c4c5d6",
+                        "light": "#ffffff",
+                        "accent": "#00c5dc",
+                        "primary": "#5867dd",
+                        "success": "#34bfa3",
+                        "info": "#36a3f7",
+                        "warning": "#ffb822",
+                        "danger": "#fd3995",
+                        "focus": "#9816f4"
+                    },
+                    "base": {
+                        "label": [
+                            "#c5cbe3",
+                            "#a1a8c3",
+                            "#3d4465",
+                            "#3e4466"
+                        ],
+                        "shape": [
+                            "#f0f3ff",
+                            "#d9dffa",
+                            "#afb4d4",
+                            "#646c9a"
+                        ]
+                    }
+                }
+            };
+        </script>
+        <!-- end::Global Config -->
+
+        <!--begin::Global Theme Bundle(used by all pages) -->
+        <script src="/UI/keenthemes.com/keen/preview/default/assets/vendors/base/vendors.bundle.copy.js" type="text/javascript"></script>
+        <script src="/UI/keenthemes.com/keen/preview/default/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+        <!--end::Global Theme Bundle -->
+
+        <asp:ContentPlaceHolder ID="PageFootPlaceHolder" runat="server" />
+    </form>
+</body>
+</html>

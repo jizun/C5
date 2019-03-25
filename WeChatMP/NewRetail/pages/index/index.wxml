@@ -1,0 +1,68 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+
+<swiper class="banner" indicator-dots="{{Banner.indicatorDots}}" indicator-color="{{Banner.indicatorColor}}" indicator-active-color="{{Banner.indicatorActiveColor}}" autoplay="{{Banner.autoplay}}" interval="{{Banner.interval}}" duration="{{Banner.duration}}">
+  <block wx:for="{{Banner.imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="page_head" style="display:none;">
+  <view class="page_head_avatar">
+    <navigator url="/pages/member/member" open-type="switchTab">
+      <image class="head_avatar_img" src="{{UserInfo.AvatarUrl}}"></image>
+    </navigator>
+  </view>
+  <view>
+    <text class="userInfo-openID">{{UserInfo.OpenID}}</text>
+  </view>
+  <view>
+    <button type="primary" size="mini" wx:if="{{!UserInfo.NickName}}" open-type="getUserInfo" bindgetuserinfo="onSetUserInfo">授权使用我的微信用户信息</button>
+    <block wx:else>
+      <navigator url="/pages/member/member" open-type="switchTab">
+        <text class="userInfo-nickName">{{UserInfo.NickName}}</text>
+      </navigator>
+    </block>
+  </view>
+</view>
+
+<view class="store_near" wx:if="{{StoreList}}">
+  <view class="store_near_text">共有{{StoreList.length}}家门店，最近的一家门店距离您{{filters.toFixed(StoreList[0].DistanceKM,2)}}公里。</view>
+  <map class="store_near_map" wx:if="{{NearbyStore}}" subkey="{{MapKey}}" latitude='{{NearbyStore[0].latitude}}' longitude='{{NearbyStore[0].longitude}}' markers="{{NearbyStore}}" show-location></map>
+  <view class="col_box">
+    <view class="col_4">
+      <text>{{NearbyStore[0].callout.content}}</text>
+      <navigator url="/pages/store/map?endlat={{NearbyStore[0].latitude}}&endlng={{NearbyStore[0].longitude}}&title={{NearbyStore[0].callout.content}}">
+        <button class="btnNav" type="primary" size="mini">导航前往</button>
+      </navigator>
+    </view>
+    <scroll-view class="store_photos col_6 nowrap" scroll-x="true">
+      <image class="store_photo" bindtap="imgBrowse" data-src="{{item}}" wx:key="{{index}}" wx:for="{{StoreList[0].Photos}}" src="{{item}}"></image>
+    </scroll-view>
+  </view>
+</view>
+<block wx:else>
+  <button bindtap='getStoreList' class="btn-confirm button-on-view">附近的门店</button>
+</block>
+
+<view class="GoodsTitle">新品推荐</view>
+<view class="GoodsNew">
+  <view class="GoodsItem" wx:for="{{GoodsList}}" wx:for-index="father_index" wx:for-item="father_item" wx:key="{{index}}">
+    <view class="GoodsInfo">
+      <view class="GoodsTags">
+        <view class="GoodsTag" wx:for="{{father_item.Tags}}" wx:key="{{index}}">{{item}}</view>
+      </view>
+      <scroll-view class="GoodsPhotos nowrap" scroll-x="true">
+        <view class="GoodsPhoto" wx:for="{{father_item.Photos}}" wx:for-index="son_index" wx:for-item="son_item" wx:key="{{index}}">
+          <image bindtap="imgBrowse" data-goodsindex='{{father_index}}' data-src="{{son_item}}" wx:key="{{index}}" src="{{son_item}}" mode="widthFix"></image>
+        </view>
+      </scroll-view>
+      <view class="GoodsTitle">{{father_item.Title}}</view>
+      <view class="GoodsPrice">{{father_item.Price}}</view>
+      <view class="GoodsMenu">
+        <navigator class="btnBuy" url="/pages/mall/detail?goodsid={{father_item.ID}}">购买</navigator>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,682 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{131F2B9E-793D-4B85-BF57-5397CD9D1D39}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMS</RootNamespace>
+    <AssemblyName>DMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\Hui-tabNav.css" />
+    <Content Include="CSS\Goods.css" />
+    <Content Include="CSS\List.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="JS\GoodsInit.js" />
+    <Content Include="JS\GoodsFun.js" />
+    <Content Include="JS\List.js" />
+    <Content Include="MOD\BI\Dashboard.aspx" />
+    <Content Include="MOD\OMS\WeChat.asmx" />
+    <Content Include="MOD\ITEM\BrandInfo.aspx" />
+    <Content Include="MOD\ITEM\GoodsInfo.aspx" />
+    <Content Include="MOD\ITEM\KindInfo.aspx" />
+    <Content Include="MOD\ITEM\SpecInfo.aspx" />
+    <Content Include="MOD\OMS\SalesOrder.aspx" />
+    <Content Include="MOD\RMS\StoreInfo.aspx" />
+    <Content Include="MOD\SYS\MenuInfo.aspx" />
+    <Content Include="MOD\SYS\ModuleInfo.aspx" />
+    <Content Include="MOD\SYS\RoleInfo.aspx" />
+    <Content Include="MOD\SYS\UserInfo.aspx" />
+    <Content Include="UC\PagerControl.ascx" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\vendors.bundle.copy.js" />
+    <Content Include="Workbench.aspx" />
+    <Content Include="JS\Hui-tabNav.js" />
+    <Content Include="JS\SHA.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="UI\ajax.googleapis.com\ajax\libs\webfont\1.6.16\webfont.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\app\scripts\bundle\app.bundle.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\app\scripts\custom\dashboard.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\app\scripts\custom\layout-builder.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\blog\grid-v2.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\blog\grid.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\blog\list.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\blog\post.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\error\404-v1.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\error\404-v2.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\error\404-v3.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\error\404-v4.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\invoice\invoice-v1.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\invoice\invoice-v2.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\pricing\pricing-v1.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\pricing\pricing-v2.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\user\login-v1.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\custom\user\login-v2.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\base\scripts.bundle.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\base\style.bundle.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\base\toasts.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\base\tooltips.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\calendar\agenda-week.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\calendar\basic.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\calendar\external.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\calendar\google.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\calendar\list-view.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\calendar\rendering.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\charts\chart-js.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\charts\Chart.min.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\charts\flotcharts.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\charts\google-charts.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\charts\morris-charts.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\advanced\column-rendering.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\advanced\column-visibility.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\advanced\footer-callback.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\advanced\multiple-controls.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\advanced\row-callback.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\advanced\row-grouping.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\basic\basic.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\basic\headers.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\basic\paginations.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\basic\scrollable.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\data-sources\ajax-client-side.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\data-sources\ajax-server-side.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\data-sources\html.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\data-sources\javascript.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\buttons.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\colreorder.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\keytable.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\responsive.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\rowgroup.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\rowreorder.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\scroller.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\extensions\select.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\search-options\advanced-search.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\datatables\search-options\column-search.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\extended\blockui.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\extended\idle-timer.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\extended\session-timeout.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\extended\sticky-panels.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\extended\sweetalert2.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\extended\toastr.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\controls\avatar.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\layouts\repeater.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\validation\controls.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\validation\widgets.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\autosize.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-datepicker.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-daterangepicker.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-datetimepicker.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-markdown.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-maxlength.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-multipleselectsplitter.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-select.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-timepicker.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\bootstrap-touchspin.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\clipboard.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\dropzone.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\input-mask.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\nouislider.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\summernote.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\forms\widgets\typeahead.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\advanced\column-rendering.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\advanced\column-width.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\advanced\modal.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\advanced\record-selection.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\advanced\row-details.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\api\events.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\api\methods.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\base\data-ajax.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\base\data-json.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\base\data-local.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\base\html-table.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\base\local-sort.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\base\translation.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\child\data-ajax.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\child\data-local.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\locked\both.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\locked\html-table.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\locked\left.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\locked\right.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\scrolling\both.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\scrolling\horizontal.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-datatable\scrolling\vertical.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-wizard\wizard-demo-v2.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-wizard\wizard-demo-v3.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-wizard\wizard-demo-v4.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\keen-wizard\wizard-demo.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\portlets\draggable.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\components\portlets\tools.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\custom\custom\login\login.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\aside\brand.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\aside\light.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\aside\navy.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\brand\brand.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\brand\light.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\brand\navy.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\header\base\brand.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\header\base\light.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\header\base\navy.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\demo\default\skins\header\menu\light.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\1.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\10.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\11.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\12.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\1200x600\2.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\1200x600\3.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\1200x600\6.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\2.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\3.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\4.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\5.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\500x600\29.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\6.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\7.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\8.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\9.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\900x600\24.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\900x600\25.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\900x600\5.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\900x600\8.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\blog-1.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\blog-2.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\blog-3.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\blog-4.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\blog-5.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\blog-6.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\blog\blog-7.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\default.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo2.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo3.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo4.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo5.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo6.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo7.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo8.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\demos-mini\demo9.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\files\doc.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\files\jpg.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\files\pdf.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\files\xml.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\files\zip.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\flags\016-spain.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\flags\017-germany.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\flags\020-flag.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\flags\300_25.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\logos\favicon.ico" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\logos\logo-1.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\logos\logo-3.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\logos\logo-4.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\logos\logo-5.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\logos\logo-6.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\404-bg1.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\404-bg2.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\404-bg3.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\404-bg4.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\bg_1.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\bg_icon.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\clouds.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\head_bg_sm.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\iconbox_bg.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\invoice1-bg.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\invoice1-logo.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\misc\invoice2-logo.png" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_1.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_10.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_11.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_14.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_2.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_3.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_4.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_5.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_7.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\100_9.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\300_10.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\300_21.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\users\300_25.jpg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\wizard\undraw_checklist_7q37.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\wizard\undraw_hiring_cyhs.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\wizard\undraw_live_collaboration_2r4y.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\media\wizard\undraw_resume_folder_2_arse.svg" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\vendors.bundle.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\vendors.bundle.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\custom\datatables\datatables.bundle.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\custom\datatables\datatables.bundle.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\custom\flot\flot.bundle.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\custom\fullcalendar\fullcalendar.bundle.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\custom\fullcalendar\fullcalendar.bundle.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\custom\jquery-ui\jquery-ui.bundle.css" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\custom\jquery-ui\jquery-ui.bundle.js" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\builder.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\accordions.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\alert.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\badge.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\breadcrumb.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\button-group.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\tabs\button.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\buttons.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\card.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\collapse.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\dropdown.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\tabs\line.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\list-group.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\modal.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\navs.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\pagination.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\popovers.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\progress.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\spinners.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\table.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\toasts.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\base\tooltips.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\calendar\agenda-week.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\calendar\basic.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\calendar\external.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\calendar\google.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\calendar\list-view.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\calendar\rendering.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\charts\chart-js.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\charts\flotcharts.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\charts\google-charts.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\charts\morris-charts.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\colors.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\head.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\iconbox.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\lists.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\navs.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\notifications.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\spinners.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\timeline.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\custom\typography.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\advanced\column-rendering.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\advanced\column-visibility.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\advanced\footer-callback.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\advanced\multiple-controls.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\advanced\row-callback.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\advanced\row-grouping.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\basic\basic.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\basic\headers.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\basic\paginations.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\basic\scrollable.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\data-sources\ajax-client-side.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\data-sources\ajax-server-side.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\data-sources\html.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\data-sources\javascript.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\buttons.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\colreorder.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\keytable.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\responsive.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\rowgroup.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\rowreorder.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\scroller.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\extensions\select.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\search-options\advanced-search.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\datatables\search-options\column-search.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\extended\blockui.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\extended\idle-timer.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\extended\scroll.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\extended\session-timeout.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\extended\sticky-panels.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\extended\sweetalert2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\extended\toastr.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\controls\avatar.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\controls\base.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\controls\checkbox.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\controls\input-group.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\controls\option.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\controls\radio.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\controls\switch.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\layouts\action-bars.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\layouts\basic.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\layouts\multi-column.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\layouts\repeater.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\layouts\sticky-action-bars.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\validation\controls.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\validation\states.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\validation\widgets.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\autosize.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-datepicker.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-daterangepicker.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-datetimepicker.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-markdown.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-maxlength.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-multipleselectsplitter.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-select.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-timepicker.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\bootstrap-touchspin.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\clipboard.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\dropzone.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\input-mask.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\nouislider.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\recaptcha.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\summernote.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\forms\widgets\typeahead.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\icons\flaticon.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\icons\fontawesome5.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\icons\lineawesome.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\icons\socicons.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\advanced\column-rendering.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\advanced\column-width.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\advanced\modal.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\advanced\record-selection.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\advanced\row-details.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\api\events.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\api\methods.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\base\data-ajax.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\base\data-json.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\base\data-local.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\base\html-table.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\base\local-sort.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\base\translation.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\child\data-ajax.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\child\data-local.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\locked\both.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\locked\html-table.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\locked\left.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\locked\right.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\scrolling\both.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\scrolling\horizontal.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-datatable\scrolling\vertical.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-wizard\wizard-v1.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-wizard\wizard-v2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-wizard\wizard-v3.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\keen-wizard\wizard-v4.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\portlets\base.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\portlets\draggable.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\portlets\sticky.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\portlets\tools.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\components\widgets.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\blog\grid-v2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\blog\grid.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\blog\list.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\blog\post.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\error\404-v1.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\error\404-v2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\error\404-v3.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\error\404-v4.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\faq\faq-v1.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\faq\faq-v2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\faq\faq-v3.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\faq\faq-v4.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\invoices\invoice-v1.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\invoices\invoice-v2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\pricing\pricing-v1.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\pricing\pricing-v2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\user\login-v1.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\user\login-v2.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\custom\user\profile-v1.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\dashboards\brand-aside.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\dashboards\brand-header.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\dashboards\light-aside.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\dashboards\navy-header.html" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\index.html" />
+    <Content Include="UI\keenthemes.com\keen\themes\themes\keen\dist\preview\inc\api\datatables\demos\orders.php" />
+    <Content Include="UI\www.google.com\recaptcha\api.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WxPayAPI\ResultNotifyPage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MOD\BI\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\BI\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\OMS\WeChat.asmx.cs">
+      <DependentUpon>WeChat.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MOD\ITEM\BrandInfo.aspx.cs">
+      <DependentUpon>BrandInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\ITEM\BrandInfo.aspx.designer.cs">
+      <DependentUpon>BrandInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\ITEM\GoodsInfo.aspx.cs">
+      <DependentUpon>GoodsInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\ITEM\GoodsInfo.aspx.designer.cs">
+      <DependentUpon>GoodsInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\ITEM\KindInfo.aspx.cs">
+      <DependentUpon>KindInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\ITEM\KindInfo.aspx.designer.cs">
+      <DependentUpon>KindInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\ITEM\SpecInfo.aspx.cs">
+      <DependentUpon>SpecInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\ITEM\SpecInfo.aspx.designer.cs">
+      <DependentUpon>SpecInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\OMS\SalesOrder.aspx.cs">
+      <DependentUpon>SalesOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\OMS\SalesOrder.aspx.designer.cs">
+      <DependentUpon>SalesOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\RMS\StoreInfo.aspx.cs">
+      <DependentUpon>StoreInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\RMS\StoreInfo.aspx.designer.cs">
+      <DependentUpon>StoreInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\SYS\MenuInfo.aspx.cs">
+      <DependentUpon>MenuInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\SYS\MenuInfo.aspx.designer.cs">
+      <DependentUpon>MenuInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\SYS\ModuleInfo.aspx.cs">
+      <DependentUpon>ModuleInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\SYS\ModuleInfo.aspx.designer.cs">
+      <DependentUpon>ModuleInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\SYS\RoleInfo.aspx.cs">
+      <DependentUpon>RoleInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\SYS\RoleInfo.aspx.designer.cs">
+      <DependentUpon>RoleInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\SYS\Upload.ashx.cs">
+      <DependentUpon>Upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MOD\SYS\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MOD\SYS\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\PagerControl.ascx.cs">
+      <DependentUpon>PagerControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\PagerControl.ascx.designer.cs">
+      <DependentUpon>PagerControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Keen.Master.cs">
+      <DependentUpon>Keen.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Keen.Master.designer.cs">
+      <DependentUpon>Keen.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Workbench.aspx.cs">
+      <DependentUpon>Workbench.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Workbench.aspx.designer.cs">
+      <DependentUpon>Workbench.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkbenchBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WxPayAPI\ResultNotifyPage.aspx.cs">
+      <DependentUpon>ResultNotifyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxPayAPI\ResultNotifyPage.aspx.designer.cs">
+      <DependentUpon>ResultNotifyPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\flaticon2\Flaticon2.ttf" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\flaticon2\Flaticon2.woff" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\flaticon\Flaticon.ttf" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\flaticon\Flaticon.woff" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\fontawesome5\fa-solid-900.ttf" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\fontawesome5\fa-solid-900.woff" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\fontawesome5\fa-solid-900.woff2" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\line-awesome\line-awesome.ttf" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\line-awesome\line-awesome.woff2" />
+    <Content Include="UI\keenthemes.com\keen\themes\themes\keen\dist\preview\inc\api\datatables\datasource\employee.json" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\socicon\socicon.woff" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\summernote\summernote.woff" />
+    <Content Include="UI\keenthemes.com\keen\preview\default\assets\vendors\base\fonts\fontawesome5\fa-brands-400.woff2" />
+    <Content Include="UI\Keen.Master" />
+    <Content Include="MOD\SYS\Upload.ashx" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WxPayAPI\WxPayAPI.csproj">
+      <Project>{25911370-F06A-4956-8EE3-659A7BA14961}</Project>
+      <Name>WxPayAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ziri.BLL\Ziri.BLL.csproj">
+      <Project>{823adf52-a221-4ee6-84d1-cfde960076d1}</Project>
+      <Name>Ziri.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ziri.MDL\Ziri.MDL.csproj">
+      <Project>{2f295794-db07-4799-bf6c-f84f23969fe3}</Project>
+      <Name>Ziri.MDL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29747</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:29747/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

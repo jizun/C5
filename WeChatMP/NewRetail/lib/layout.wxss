@@ -1,0 +1,55 @@
+.nowrap {
+  white-space: nowrap;
+  display: flex;
+}
+
+.col_box {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.col_2 {
+  width: 20%;
+}
+
+.col_25 {
+  width: 25%;
+}
+
+.col_3 {
+  width: 30%;
+}
+
+.col_4 {
+  width: 40%;
+}
+
+.col_5 {
+  width: 50%;
+}
+
+.col_6 {
+  width: 60%;
+}
+
+.col_7 {
+  width: 70%;
+}
+
+.col_8 {
+  width: 80%;
+}
+
+.tab_category {
+  border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+}
+
+.tab_button {
+  padding: 5px;
+}
+
+.tab_selected {
+  background: rgba(0, 0, 0, 0.1);
+}

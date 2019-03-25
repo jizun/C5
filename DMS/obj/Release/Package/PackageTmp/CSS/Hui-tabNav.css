@@ -1,0 +1,181 @@
+﻿@charset "utf-8";
+
+/*框架*/
+.Hui-article-box {
+}
+
+    .Hui-article-box ul {
+        padding: 0px;
+    }
+
+/*框架导航*/
+.Hui-tabNav {
+    height: 34px;
+    overflow: hidden;
+    position: relative;
+    background-image: url('/media/images/tab-line.gif') !important;
+}
+
+    .Hui-tabNav .acrossTab {
+        position: absolute;
+        height: 26px;
+        line-height: 26px;
+        background: none;
+        top: 8px;
+        left: 0;
+        padding-top: 0
+    }
+
+        .Hui-tabNav .acrossTab li {
+            height: 26px;
+            line-height: 26px;
+        }
+
+            .Hui-tabNav .acrossTab li em {
+                right: -16px;
+                height: 26px;
+                width: 16px
+            }
+
+.Hui-tabNav-wp {
+    position: relative;
+    height: 35px;
+    overflow: hidden
+}
+
+.Hui-tabNav .acrossTab li, .Hui-tabNav .acrossTab li em {
+    background-image: url(/UI/www.datatables.club/example/static/h-ui.admin/images/acrossTab/acrossTab-2.png)
+}
+
+.acrossTab {
+    height: 29px;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    padding-top: 1px
+}
+
+    .acrossTab, .acrossTab li, .acrossTab li em {
+        background-image: url('/UI/www.datatables.club/example/static/h-ui/images/acrossTab/acrossTab-bg.png');
+    }
+
+        .acrossTab li, .acrossTab li em {
+            background-repeat: no-repeat;
+            background-position: 0 0
+        }
+
+        .acrossTab li {
+            position: relative;
+            float: left;
+            display: inline-block;
+            height: 29px;
+            line-height: 29px;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 0 30px;
+            white-space: nowrap;
+            color: #282828;
+            background-position: 0 0;
+            z-index: 1;
+        }
+
+            .acrossTab li em {
+                position: absolute;
+                width: 23px;
+                height: 29px;
+                right: -20px;
+                top: 0;
+                z-index: 1;
+                background-position: right -30px
+            }
+
+            .acrossTab li:hover {
+                background-position: 0 -60px
+            }
+
+                .acrossTab li:hover em {
+                    background-position: right -90px
+                }
+
+            .acrossTab li.active {
+                background-position: 0 -120px;
+                z-index: 2;
+            }
+
+                .acrossTab li.active em {
+                    background-position: right -150px
+                }
+
+            .acrossTab li i {
+                position: absolute;
+                display: block;
+                width: 13px;
+                height: 13px;
+                top: 50%;
+                margin-top: -6px;
+                right: 5px;
+                font-size: 0;
+                line-height: 0;
+                cursor: pointer;
+                background-image: url(/UI/www.datatables.club/example/static/h-ui/images/acrossTab/acrossTab-close.png);
+                background-repeat: no-repeat;
+                background-position: 0 0
+            }
+
+                .acrossTab li i:hover {
+                    background-position: 0 bottom
+                }
+
+/*更多*/
+.Hui-tabNav-more {
+    position: absolute;
+    right: 0px;
+    width: 70px;
+    top: 4px;
+    display: none;
+    z-index: 3;
+}
+
+    .Hui-tabNav-more a {
+        padding: 3px 8px;
+        cursor: pointer;
+        color: rgba(255,255,255,1) !important;
+        background: rgba(0,0,0,0.5) !important;
+    }
+
+/*加载中*/
+.loading {
+    height: 100px;
+    background: url(/UI/www.datatables.club/example/static/h-ui.admin/images/loading-b.gif) no-repeat center
+}
+
+/*子页*/
+.page-content, .Hui-article {
+    position: fixed;
+    width: calc(100% - 260px);
+    height: calc(100% - 75px - 35px);
+}
+
+.show_iframe, .show_iframe iframe {
+    width: 100%;
+    height: 100%;
+}
+
+    .show_iframe iframe {
+        border: 0px;
+    }
+
+/*移动端隐藏导航*/
+@media (max-width: 1025px) {
+    .page-content, .Hui-article {
+        width: 100%;
+        height: calc(100% - 75px + 17px);
+    }
+
+    .Hui-tabNav {
+        display: none;
+    }
+
+    .Hui-article {
+        top: 60px
+    }
+}

@@ -1,0 +1,27 @@
+<view class="col_box user_info">
+  <view class="col_3 user_avatar">
+    <image src="{{UserInfo.AvatarUrl}}"></image>
+  </view>
+  <view class="col_7 user_profile">
+    <view wx:if="{{UserInfo.NickName}}">
+      <view class="profile_item user_name">{{UserInfo.NickName}}</view>
+      <view class="profile_item member_level">普通会员</view>
+    </view>
+    <view wx:else>
+      <button class="btnLogin" type="primary" size="mini" open-type="getUserInfo" bindgetuserinfo="onSetUserInfo">登录我的微信用户</button>
+    </view>
+  </view>
+</view>
+
+<view class="col_box member_info">
+  <view class="col_25" wx:for="{{MemberTabs}}" wx:key="{{index}}">{{item}}</view>
+</view>
+
+<navigator class="menu_item" url="/pages/order/list">
+  <view class="menu_icon">　</view>我的订单</navigator>
+
+<navigator class="menu_item" url="">
+  <view class="menu_icon">　</view>宝贝状态</navigator>
+
+<navigator class="menu_item" url="">
+  <view class="menu_icon">　</view>售后服务</navigator>
